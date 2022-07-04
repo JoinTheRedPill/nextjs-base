@@ -1,13 +1,11 @@
-import type { NextPage } from "next";
+import { HomeTemplate } from "@templates";
+import { LayoutType } from "@layouts/types";
 
-const Home: NextPage = () => {
-  return (
-    <div>
-      <main>
-        <h1 className="bg-green-500">Welcome to Next.js!</h1>
-      </main>
-    </div>
-  );
+const Page = () => {
+  return <HomeTemplate />;
 };
 
-export default Home;
+export default Page;
+
+Page.requireAuth = false;
+Page.layout = LayoutType.DASHBOARD;
