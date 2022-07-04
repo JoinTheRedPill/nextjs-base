@@ -1,7 +1,7 @@
 import { useTheme } from "@hooks";
 
 const ThemeSelector = () => {
-  const { theme, setTheme, mounted, isDark } = useTheme();
+  const { setTheme, mounted, isDark } = useTheme();
   if (!mounted) return null;
 
   const handleThemeChange = (ev: any) => {
