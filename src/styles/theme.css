@@ -87,7 +87,91 @@
     --color-error-content: #ffffff;
 
     /* General */
+    --border-radius: 0.2rem;
     --font-family: Lato, sans-serif;
+    --font-size-md: 0.9rem;
+
+    /* Button */
+    --button-border-radius: 0rem;
+    --button-primary-background-color: var(--color-primary, inherit);
+    --button-primary-border: 1px solid var(--color-primary, inherit);
+
+    /* Checkbox */
+    --checkbox-bg: transparent;
+    --checkbox-border-radius: 0rem;
+    --checkbox-border-color: var(--color-base-content);
+
+    /* Header */
+    --header-bg: var(--color-base-700);
+    --header-color: var(--color-base-content);
+    --header-border-color: var(--color-base-500);
+    --header-button-color: var(--color-base-content);
+    --header-padding-x: 1rem;
+    --header-padding-y: 0;
+
+    /* Input */
+    --input-bg: transparent;
+    --input-color: var(--color-primary);
+    --input-border-radius: 0rem;
+    --input-border-color: var(--color-base-content);
+
+    /* Label */
+    --label-font-size: 0.8rem;
+
+    /* Loader (Router) */
+    --loader-bg-color: rgba(0, 0, 0, 0.7);
+    --loader-color: var(--color-primary);
+    --loader-font-size: 1.7rem;
+    --loader-spinner-color: var(--color-primary);
+    --loader-spinner-size: 60px;
+    --loader-flex-direction: column;
+    --loader-vertical-gap: 20px;
+    --loader-horizontal-gap: 0;
+
+    /* Modal */
+    --modal-bg: var(--color-base-100);
+    --modal-border-color: var(--color-primary);
+    --modal-border-radius: 0;
+    --modal-border-size: 1px;
+    --modal-border-type: solid;
+    --modal-color: var(--color-base-content);
+    --modal-font-family: var(--font-family);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.8);
+    --modal-title-fontsize: 1.5rem;
+    --modal-title-align: left;
+    --modal-description-fontsize: 1.2rem;
+    --modal-description-align: left;
+    --modal-fontsize: 1rem;
+    --modal-padding: 0;
+
+    /* Select */
+    --select-bg: transparent;
+    --select-color: var(--color-base-content);
+    --select-border-radius: 0rem;
+    --select-border-color: var(--color-base-content);
+
+    /* Sidebar */
+    --sidebar-bg: var(--color-base-700);
+    --sidebar-color: var(--color-base-content);
+    --sidebar-button-color: var(--color-base-content-muted);
+    --sidebar-border-color: var(--color-primary);
+    --sidebar-padding-x: 0;
+    --sidebar-padding-y: 0;
+
+    /* Switch */
+    --switch-checked-bg: var(--color-primary);
+    --switch-checked-button-color: var(--color-base-content);
+    --switch-checked-border-color: var(--color-base-400);
+    --switch-unchecked-bg: var(--color-base-400);
+    --switch-unchecked-button-color: var(--color-base-content-muted);
+    --switch-unchecked-border-color: var(--color-base-400);
+    --switch-border-radius: 30px;
+
+    /* Subtitle */
+    --subtitle-color: var(--color-base-content);
+
+    /* Title */
+    --title-color: var(--color-base-content);
 }
 
 .dark {
@@ -108,4 +192,6 @@ body {
     background-color: var(--color-base-100);
     color: var(--color-base-content);
     font-family: var(--font-family);
+    width: 100%;
+    height: 100%;
 }

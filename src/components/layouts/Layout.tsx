@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { DashboardLayout } from "./dashboard";
+import { default as DashboardLayout } from "./DashboardLayout";
 import { default as Providers } from "./Providers";
 import { LayoutType } from "./types";
 
