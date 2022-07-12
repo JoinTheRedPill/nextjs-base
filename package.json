@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "1.6.5",
     "@jointheredpill/react-component-library": "0.0.86",
     "@next-auth/dynamodb-adapter": "1.0.3",
     "graphql-request": "4.3.0",

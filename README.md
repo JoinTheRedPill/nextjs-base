@@ -1,34 +1,83 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Arquetipo aplicación NextJS con autenticación (NextAuth), i18n y temas actualizados (dark/light mode).
 
-## Getting Started
+# Resumen / dependencias
 
-First, run the development server:
+- Next (v12) + React (v18) + Recoil
+- Autenticación - `next-auth@4`
+- i18n - `next-i18next@11`
+- Componentes - `tailwindcss@3 + primereact@8`
+- Temas - `next-themes`
 
-```bash
-npm run dev
-# or
-yarn dev
+# Configuración autenticación
+
+### Variables de entorno (Generales)
+
+|              Name              |     Description     |
+| :----------------------------: | :-----------------: |
+|     `NEXT_PUBLIC_ENV_NAME`     |       Entorno       |
+| `NEXT_PUBLIC_GRAPHQL_ENDPOINT` | Endpoint de GraphQL |
+
+### Variables de entorno (NextAuth)
+
+|                       Name                        |                             Description                              |
+| :-----------------------------------------------: | :------------------------------------------------------------------: |
+|                  `NEXTAUTH_URL`                   |        URL base de la aplicación. Donde redirecciona NextAuth        |
+| `NEXT_PUBLIC_NEXTAUTH_SESSION_REFETCH_IN_SECONDS` |       Frecuencia en segundos en la que se comprueba la sesión        |
+|             `NEXTAUTH_AWS_ACCESS_KEY`             |          Clave de acceso. Autenticación con AWS (DynamoDB)           |
+|               `NEXTAUTH_AWS_REGION`               |               Región. Autenticación con AWS (DynamoDB)               |
+|             `NEXTAUTH_AWS_SECRET_KEY`             |           Clave secreta. Autenticación con AWS (DynamoDB)            |
+|               `NEXTAUTH_EMAIL_FROM`               |            Email desde donde se envían las noticiaciones             |
+|               `NEXTAUTH_JWT_SECRET`               |            Clave secreta para la generación del token JWT            |
+|     `NEXTAUTH_JWT_SESSION_MAX_AGE_IN_SECONDS`     |                  Duración en segundos del token JWT                  |
+|     `NEXTAUTH_REFRESH_SESSION_GAP_IN_MINUTES`     | Tiempo en minutos en la que se antepone el refresco de la sesión JWT |
+|                 `NEXTAUTH_SECRET`                 |       Clave secreta para encriptación de la sesión de NextAuth       |
+|               `NEXTAUTH_TABLE_NAME`               |              Nombre de la tabla de usuarios (DynamoDB)               |
+
+# Variables de entorno (NextAuth - Providers)
+
+|               Name               |       Description        |
+| :------------------------------: | :----------------------: |
+|   `NEXTAUTH_DISCORD_CLIENT_ID`   |   Client id de Discord   |
+| `NEXTAUTH_DISCORD_CLIENT_SECRET` | Client secret de Discord |
+|   `NEXTAUTH_GOOGLE_CLIENT_ID`    |   Client id de Google    |
+| `NEXTAUTH_GOOGLE_CLIENT_SECRET`  | Client secret de Google  |
+|   `NEXTAUTH_TWITTER_CLIENT_ID`   |   Client id de Twitter   |
+| `NEXTAUTH_TWITTER_CLIENT_SECRET` | Client secret de Twitter |
+
+# Configuración i18n
+
+1. Revisar archivo de configuración `next-i18next.config.js` para indicar los idiomas permitidos, el idioma por defecto y la ubicación de los archivos de texto.
+
+2. Añadir los archivos `json` por cada uno de los idiomas.
+
+3. Añadir la librería como un provider en `_app.js`;
+
+```typescript
+const AppWithI18n = appWithTranslation(App);
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Cargar los archivos correspondientes en cada página con SSR.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```typescript
+export const getServerSideProps = async ({ locale }: NextPageContext) => ({
+  props: {
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
+});
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+5. Cargar los textos con el hook `useTranslation`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```typescript
+const { t } = useTranslation("common");
+console.log("Ejemplo: ", t<string>("common.example"));
+```
 
-## Learn More
+Para más información, revisar la documentación del plugin [next-i18next](https://github.com/i18next/next-i18next).
 
-To learn more about Next.js, take a look at the following resources:
+# Configuración temas
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Configuración de variables de la librería de componentes. `src/styles/theme.css`
+2. Configuración de `tailwind.config.ts`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Revisar todas las variables expuestas en [README de la librería de componentes](https://github.com/JoinTheRedPill/react-component-library/blob/master/readme.md)
