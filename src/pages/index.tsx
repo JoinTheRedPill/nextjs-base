@@ -18,5 +18,5 @@ export const getServerSideProps = async ({
   },
 });
 
-Page.requireAuth = false;
+Page.requireAuth = true;
 Page.layout = LayoutType.DASHBOARD;

@@ -1,0 +1,18 @@
+{
+  "sign-in-subtitle": "Inicia sesión con tu email o con cualquier proveedor disponible",
+  "sign-in-title": "Inicio de sesión",
+  "email-title": "Accede con tu email",
+  "email-placeholder": "Escribe tu email aquí",
+  "btn-submit": "Iniciar mi sesión",
+  "providers-title": "O con tu cuenta de...",
+  "continue-with": "Continuar con",
+  "error": {
+    "OAuthAccountNotLinked": "El correo electrónico de la cuenta ya está vinculado, pero no con esta cuenta de usuario",
+    "EmailSignin": "Error al enviar el correo electrónico con el token de verificación",
+    "AccessDenied": "No tienes permisos para acceder a la aplicación. Ponte en contacto con un administrador",
+    "EmailSent": "Te hemos enviado un email de verificación. Revisa tu bandeja de entrada para continuar",
+    "Callback": "Error in the OAuth callback handler route",
+    "Default": "Ha ocurrido un error inesperado durante la autenticación, inténtalo de nuevo",
+    "EmailRequired": "La cuenta de usuario utilizada no tiene un correo electrónico asociado o visible. Por favor, revisa la configuración de la cuenta o accede con otro método de autenticación"
+  }
+}

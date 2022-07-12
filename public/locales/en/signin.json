@@ -1,0 +1,18 @@
+{
+  "sign-in-subtitle": "Log in with your email or with any available provider",
+  "sign-in-title": "Sign in",
+  "email-title": "Login with your email",
+  "email-placeholder": "Write your email here",
+  "btn-submit": "Login",
+  "providers-title": "Or with your account...",
+  "continue-with": "Continue with",
+  "error": {
+    "OAuthAccountNotLinked": "The email of this account is already linked, but not with this OAuth account.",
+    "EmailSignin": "Error found on email verification.",
+    "AccessDenied": "Access denied. Please contact an admin.",
+    "EmailSent": "Verification email sent. Check your email inbox.",
+    "Callback": "Error in the OAuth callback handler route.",
+    "Default": "Unexpected error. Try again.",
+    "EmailRequired": "The user account used does not have an associated or visible email. Please check your account settings or sign in with another authentication method"
+  }
+}

@@ -6,5 +6,6 @@
   },
   "welcome": "Welcome to NextJS - Base project!",
   "theme": "Theme",
-  "language": "Language"
+  "language": "Language",
+  "sign-out": "Sign out"
 }

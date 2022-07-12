@@ -44,16 +44,17 @@
     --color-secondary-900: #62686a;
     --color-secondary-content: #ffffff;
 
-    --color-accent-100: #ff7e47;
-    --color-accent-200: #ff7033;
-    --color-accent-300: #ff621f;
-    --color-accent-400: #ff540a;
-    --color-accent-500: #fe4e00;
-    --color-accent-600: #f54900;
-    --color-accent-700: #e04300;
-    --color-accent-800: #cc3d00;
-    --color-accent-900: #b83700;
+    --color-accent-100: #e3e7f8;
+    --color-accent-200: #c7d0f0;
+    --color-accent-300: #aab8e9;
+    --color-accent-400: #8ea1e1;
+    --color-accent-500: #7289da;
+    --color-accent-600: #677bc4;
+    --color-accent-700: #5b6eae;
+    --color-accent-800: #445283;
+    --color-accent-900: #2e3757;
     --color-accent-content: #ffffff;
+    --color-accent: var(--color-accent-500);
 
     --color-neutral-100: #33ccff;
     --color-neutral-200: #1fc7ff;
@@ -65,26 +66,31 @@
     --color-neutral-800: #008ab8;
     --color-neutral-900: #007aa3;
     --color-neutral-content: #ffffff;
+    --color-neutral: var(--color-neutral-500);
 
     --color-info-300: #0ac2ff;
     --color-info-500: #00a7e1;
     --color-info-700: #0099cc;
     --color-info-content: #ffffff;
+    --color-info: var(--color-info-500);
 
     --color-success-300: #67a64a;
     --color-success-500: #4d8b31;
     --color-success-700: #3d7721;
     --color-success-content: #ffffff;
+    --color-success: var(--color-success-500);
 
     --color-warning-300: #f6dd73;
     --color-warning-500: #f4d450;
     --color-warning-700: #c3aa40;
     --color-warning-content: #202020;
+    --color-warning: var(--color-warning-500);
 
-    --color-error-300: #e32b47;
-    --color-error-500: #dd0426;
-    --color-error-700: #a4031b;
+    --color-error-300: #f07b72;
+    --color-error-500: #ea4335;
+    --color-error-700: #a42f25;
     --color-error-content: #ffffff;
+    --color-error: var(--color-error-500);
 
     /* General */
     --border-radius: 0.2rem;
@@ -93,8 +99,8 @@
 
     /* Button */
     --button-border-radius: 0rem;
-    --button-primary-background-color: var(--color-primary, inherit);
-    --button-primary-border: 1px solid var(--color-primary, inherit);
+    --button-primary-background-color: var(--color-primary-500, inherit);
+    --button-primary-border: 1px solid var(--color-primary-500, inherit);
 
     /* Checkbox */
     --checkbox-bg: transparent;
