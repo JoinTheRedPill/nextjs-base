@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-// import { appWithTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next";
 // import { SessionProvider, useSession, signIn } from "next-auth/react";
 // import { useEffect } from "react";
 // import { useRouter } from "next/router";
@@ -59,7 +59,7 @@ function Auth({ children }: { children: React.ReactNode }): any {
 
 App.displayName = "NextJS Base";
 
-const AppWithI18n = App; // appWithTranslation(App);
+const AppWithI18n = appWithTranslation(App);
 const refetchInterval = parseInt(
   process.env.NEXT_PUBLIC_JWT_SESSION_REFETCH_INTERVAL || "3600"
 );

@@ -1,0 +1,10 @@
+{
+  "dashboard": {
+    "header": "Dashboard Header",
+    "sidebar-menu": "Sidebar menu",
+    "sidebar-menu-footer": "Sidebar menu footer"
+  },
+  "welcome": "Welcome to NextJS - Base project!",
+  "theme": "Theme",
+  "language": "Language"
+}

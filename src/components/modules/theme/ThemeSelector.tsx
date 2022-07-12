@@ -1,3 +1,4 @@
+import { Dropdown } from "@elements";
 import { useTheme } from "@hooks";
 
 const ThemeSelector = () => {
@@ -10,12 +11,12 @@ const ThemeSelector = () => {
   };
 
   return (
-    <select onChange={handleThemeChange}>
+    <Dropdown onChange={handleThemeChange}>
       <option value="light">🌞 Light</option> {/* Default */}
       <option value="dark" selected={isDark}>
         🌚 Dark
       </option>
-    </select>
+    </Dropdown>
   );
 };
 
